@@ -1,12 +1,40 @@
-﻿<Window x:Class="HIT.MainWindow"
+﻿<Window WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" x:Class="HIT.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HIT"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="ФімозікНІТ" Height="450" Width="800">
+    <Window.Background >
+        <SolidColorBrush Color="#1a1f25"></SolidColorBrush>
+    </Window.Background>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="1" Grid.Column="1">
+            <TextBlock FontSize="24" Text="зайти в" FontWeight="UltraLight" Foreground="White" Grid.Column="1" Grid.Row ="1"></TextBlock>
+        </Label>
+        <Label Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="фімозік" Margin="0,30,0,0" FontSize="24" FontWeight="UltraLight" Foreground="White" Grid.Column="1" Grid.Row ="1"></TextBlock>
+        </Label>
+        <Button Grid.Column="1" Grid.Row="1" Margin="187,62,0,86" Content="Регістрація" Foreground="Gray" Click="Button_Click" BorderBrush="Transparent" Background="Transparent" Grid.RowSpan="2">
+        </Button>
 
+        <TextBox Grid.Row="2" Grid.Column="1" Text="Моє ім'я" Foreground="Gray" FontSize="20" TextAlignment="Center" FontWeight="Light" VerticalContentAlignment="Center"  Background="Transparent" BorderBrush="White"  Margin="0,0,0,53"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="пароль" Foreground="Gray" FontSize="20" FontWeight="Light" TextAlignment="Center"  Background="Transparent" BorderBrush="White"   Margin="0,41,0,10"/>
+
+        <Button Content="Sign in" Foreground="White" Grid.Column="1" Grid.Row="2" Background="Orange" BorderThickness="2" BorderBrush="Yellow" Margin="0,86,0,49" Grid.RowSpan="2"/>
+        <Button Content="забув як розтягувати фімозік..." FontSize="10" Foreground="Gray" Grid.Column="1" BorderBrush="Transparent" Grid.Row="3" Background="Transparent" Margin="126,38,0,29"/>
     </Grid>
 </Window>
